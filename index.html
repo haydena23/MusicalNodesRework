@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Nodes</title>
+    <meta name="description" content="Graph visualizer for finding artists">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/2.7.10/cytoscape.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body style="background-color: #1ed760;">
+    <header>
+      <h1>Musical Nodes</h1>
+      <h2>Display related artists using the Spotify API</h2>
+    </header>
+    <main>
+      <form>
+        <label for="searchField">Search:</label>
+        <input type="text" id="searchField" placeholder="Spotify Artist Name">
+        <button type="button" id="searchButton">Enter</button>
+        <button type="button" id="reset">Reset</button>
+      </form>
+      <div id="cy" style="border: 5px solid black;"></div>
+      <section>
+        <h2>Artist Information</h2>
+        <div id="bio">
+          <h3 id="artist">Artist</h3>
+          <div class="buttons">
+            <button type="button" id="locate">Locate Node</button>
+            <button type="button" id="isolate">Isolate Node</button>
+          </div>
+          <div class="info">
+            <h4>Followers:</h4>
+            <p id="foll"></p>
+            <h4>Genres:</h4>
+            <p id="genr"></p>
+            <h4>Relative Popularity (0-100):</h4>
+            <p id="pop"></p>
+            <h4>Spotify URI link:</h4>
+            <p><a id="uri" href="">Link</a></p>
+            <h4>Artist Image:</h4>
+            <p><img id="img" src="" width="" height=""></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>CS445 Networks Project, Spring 2022<br>By Tony Hayden, Kai Vickers, Connor Morgan, Geryl Vinoya<br><a href="https://github.com/haydena23/haydena23.github.io">Check it out on GitHub!</a></p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
